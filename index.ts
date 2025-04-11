@@ -141,9 +141,9 @@ async function main() {
     throw e;
   } finally {
     for (const client of clients) {
-      client.close();
+      await client.close();
     }
-    process.exit(0);
+    //process.exit(0);
   }
 }
 
