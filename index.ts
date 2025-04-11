@@ -29,7 +29,8 @@ async function main() {
     
     for (const name in mcpServersConfig.mcpServers) {
       const config = mcpServersConfig.mcpServers[name];
-      
+      console.log(`Connecting to ${name} at ${config.command} ${config.args.join(" ")}`);
+
       const mcp = new Client({ name: name, version: "1.0.0" });
       clients.push(mcp);
       
@@ -37,7 +38,7 @@ async function main() {
         command: config.command,
         args: config.args,
       });
-      mcp.connect(transport);
+      await mcp.connect(transport);
       
       const toolsResult = await mcp.listTools();
       for (const tool of toolsResult.tools) {
@@ -142,6 +143,7 @@ async function main() {
     for (const client of clients) {
       client.close();
     }
+    process.exit(0);
   }
 }
 
