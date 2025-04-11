@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "file-system": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+	"C:/Users/<YOUR_HOME>/Documents"
+      ]
+    }
+  }
+}
+
