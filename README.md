@@ -42,7 +42,7 @@ If the above completes successfully and a `build` folder is created, you're all 
 Create a `.env` file in this folder with the following content:
 
 ```
-ANTHROPIC_API_KEY="<ANTHROPICのAPIキー>"
+ANTHROPIC_API_KEY="<ANTHROPIC API KEY>"
 ```
 
 Run it with: `node build/index.js`. Try entering a question. Type `quit` to exit.
